@@ -1,0 +1,15 @@
+message=input('tell me something')  #不输入空格，如ILoveYou 
+message=message.upper()
+key=input('choose a number from 1 to 25')
+key=int(key)
+outcome=''
+Modes='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+for sweet in message:
+    if sweet in Modes:
+        less=Modes.find(sweet)
+        less= less + key
+    if less >= len(Modes):
+        less=less-len(Modes)
+    outcome=Modes[less]
+
+    print(list(outcome))
